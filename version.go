@@ -23,6 +23,25 @@ func DefaultVersion() *Version {
 	}
 }
 
+func NewVersionOrDefault(versionStr, commit, ref, buildTimeStr string) *Version {
+	fallback := DefaultVersion()
+	parsedBuildTime, err := time.Parse(time.UnixDate, buildTimeStr)
+	if err != nil {
+		parsedBuildTime = fallback.BuildTime
+	}
+
+	parsedVersion, err := version.NewVersion(versionStr)
+	if err != nil {
+		parsedVersion = fallback.Version
+	}
+	return &Version{
+		Version:   parsedVersion,
+		Commit:    commit,
+		Ref:       ref,
+		BuildTime: parsedBuildTime,
+	}
+}
+
 func NewVersion(versionStr, commit string, buildTime time.Time) (*Version, error) {
 	versionObj, err := version.NewVersion(versionStr)
 	if err != nil {
