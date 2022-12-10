@@ -1,4 +1,4 @@
-package githubVersionChecker
+package ghvu
 
 import (
 	"fmt"
@@ -11,6 +11,16 @@ type Version struct {
 	Commit    string
 	Ref       string
 	BuildTime time.Time
+}
+
+func DefaultVersion() *Version {
+	versionObj, _ := version.NewVersion("v0.0.1")
+	return &Version{
+		Version:   versionObj,
+		Commit:    "",
+		Ref:       "refs/tags/v0.0.1",
+		BuildTime: time.Time{},
+	}
 }
 
 func NewVersion(versionStr, commit string, buildTime time.Time) (*Version, error) {

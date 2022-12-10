@@ -1,4 +1,4 @@
-package githubVersionChecker
+package ghvu
 
 import (
 	"context"
