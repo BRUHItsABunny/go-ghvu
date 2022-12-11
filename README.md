@@ -2,11 +2,9 @@
 
 A library to help to version your Go binaries with GitHub releases.
 
-## Examples
+## Usage
 
-### General usage
-
-#### Step 1
+### Step 1
 Make a `version.go` file and populate it with the following information:
 
 ```go
@@ -37,7 +35,7 @@ func init() {
 }
 ```
 
-#### Step 2
+### Step 2
 Print the current version and check for a newer function like this:
 
 ```go
@@ -60,13 +58,15 @@ func main(){
 }
 ```
 
-#### Step 3
+### Step 3
 Build your executable with your ldflags
 
 `go build main.go -ldflags="-X 'utils.AppVersion=v0.0.1' -X 'utils.GitCommit=somehash' -X 'utils.GitRef=sometag'"`
 
-#### Step 4
+### Step 4
 Tag and release your code in accordance with your version you built with
+
+## Examples
 
 ### 1. Canary Replay
 You can find the whole repository [here](https://github.com/BRUHItsABunny/canary-replay).
