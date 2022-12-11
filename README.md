@@ -70,6 +70,12 @@ Tag and release your code in accordance with your version you built with
 
 ### 1. Canary Replay
 You can find the whole repository [here](https://github.com/BRUHItsABunny/canary-replay).
-* Step 1: [version.go](https://github.com/BRUHItsABunny/canary-replay/blob/main/utils/version.go)
+* Step 1: [version.go](https://github.com/BRUHItsABunny/canary-replay/blob/abbf10c740bae9082fab9a97336c66b72c91d589/utils/version.go)
 * Step 2: [main.go](https://github.com/BRUHItsABunny/canary-replay/blob/abbf10c740bae9082fab9a97336c66b72c91d589/main.go#L74)
 * Step 3+4: [build with GitHub actions](https://github.com/BRUHItsABunny/canary-replay/blob/abbf10c740bae9082fab9a97336c66b72c91d589/.github/workflows/tag.yaml)
+
+### 2. Premiumize File Sync
+You can find the whole repository [here](https://github.com/BRUHItsABunny/Premiumize-File-Sync).
+* Step 1: [version.go](https://github.com/BRUHItsABunny/Premiumize-File-Sync/blob/b00fcf2ff1484c147e0f1b8671d3efc321968064/app/version.go)
+* Step 2: [build version output to display](https://github.com/BRUHItsABunny/Premiumize-File-Sync/blob/b00fcf2ff1484c147e0f1b8671d3efc321968064/app/app.go#L128)
+* Step 3+4: [build with GitHub actions](https://github.com/BRUHItsABunny/Premiumize-File-Sync/blob/b00fcf2ff1484c147e0f1b8671d3efc321968064/.github/workflows/tag.yaml)
